@@ -39,9 +39,46 @@
         <br>
         <input type="date" name="Birthdate" id="birthdate"
         placeholder="Please enter birthdate" max="2025-02-03" required/>
+        
+        <br>
+        <br>
+        <label for="gender">Gender:</label>
+        <br>
+        <input type="radio" name="gender" id="gender" value="1" checked /> Male <br>
+        <input type="radio" name="gender" id="gender" value="0" /> Female <br>
 
         <br>
         <br>
+        <label for="skills">Select your Skills:</label>
+        <br>
+        <input type="checkbox" name="skills[]" id="skills" value="Communication" checked/> Communication <br>
+        <input type="checkbox" name="skills" id="skills" value="Creativity" checked /> Creativity <br>
+        <input type="checkbox" name="skills" id="skills" value="Problem-solving" /> Problem-solving <br>
+        <input type="checkbox" name="skills" id="skills" value="Team Work" /> Team Work <br>
+        <input type="checkbox" name="skills" id="skills" value="Work under-pressure" /> Work under-pressure <br>
+        
+        <br>
+        <label for="country">What is your country:</label>
+        <br>
+      <select name="country" id="country" multiple>
+            <option value="jo">Jordan</option>
+            <option value="ksa">KSA</option>
+            <option value="uae">UAE</option>
+            <option value="uae">UAE</option>
+            <option value="ir">Iraq</option>
+            <option value="ku">kuwait</option>
+        </select>
+        <br>
+        <br>
+        <!-- <input type="text" list="country" name="country">
+        <datalist id="country">
+            <option value="jo">Jordan</option>
+            <option value="ksa">KSA</option>
+            <option value="uae">UAE</option>
+            <option value="ir">Iraq</option>
+            <option value="ku">kuwait</option>
+        </datalist>-->
+       
         <label for="email">Email</label>
         <br>
         <input type="email" name="Email" id="email"
