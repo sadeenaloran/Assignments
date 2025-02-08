@@ -1,0 +1,19 @@
+h1 {
+    color:yellow;
+}
+h2 {
+    color:rgb(0, 200, 255);
+}
+h3 {
+    color:rgb(233, 20, 244);
+}
+p {
+    color:rgb(35, 26, 143);
+}
+#pargh2 {
+    color:rgb(15, 180, 92);
+}
+.text_color_bold_600 {
+    color:rgb(171, 13, 203);    
+    font-weight: 600;
+}
