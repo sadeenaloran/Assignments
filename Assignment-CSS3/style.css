@@ -1,0 +1,34 @@
+h1 {
+    border:1px solid rgb(234, 72, 234);
+    margin-bottom: 10px;
+
+}
+h2{
+    border:1px solid rgb(217, 27, 214);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+}
+p {
+    border:1px solid rgb(191, 39, 118);
+    margin-top: 0px;
+    padding: 10px 10px 10px 10px;
+
+} 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    border: 5px solid red;
+    height: 100vh;
+}
+img {
+    border: 5px solid rgb(63, 5, 149);
+    width: 40%;
+}
+span {
+    border: 2px solid rgb(12, 16, 126);
+    width: 60%;
+}
