@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:  #ac5bcc;
+    color: aliceblue;
+    height: 100vh;
+}
+.head {
+    padding: 10px 10px;
+    background-color:  #b163cf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+.item {
+    border: 1px solid #543a5e;
+    margin-left: 250px;
+    text-align:center;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 30px;
+    flex: 1 1 1;
+    gap: 10px;
+}
+.chat-box {
+    display: flex;
+    gap:10px;
+}
+.message {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 25px;
+    border:none;
+    outline: none;
+}
+.bar {
+    background-color: #ac5bcc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+.container{
+    display: flex;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.parent{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items:self-start;
+    border-radius: 15px;
+    gap: 20px;
+    background-color: rgb(157, 94, 197);
+    flex-wrap: wrap;
+    border: 1px solid rgb(86, 61, 105);
+    width: 700px;
+}
+.child {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid rgb(78, 67, 87);
+    border-radius: 25px;
+    flex-wrap: wrap;
+}
+.child1 {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 25px;
+    flex-wrap: wrap;
+}
+.parent2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.history {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border: 1px solid rgb(100, 56, 119);
+    background-color: #ac5bcc;
+}
+.box {
+    padding: 5px;
+    border: 1px solid rgb(73, 64, 76);
+    border-radius: 25px;
+    background-color: rgb(154, 87, 199);
+    color: rgb(228, 218, 231);
+    text-align: center;
+    cursor: pointer;
+    flex:1;
+}
+
+

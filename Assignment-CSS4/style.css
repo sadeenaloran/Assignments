@@ -1,0 +1,28 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.first {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.second {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+
+}
+div {
+    padding: 10px; 
+    border: 2px solid rgb(99, 12, 153);
+
+}
+.child1 {
+    flex:1
+}
+.child3 {
+    flex:3
+}
