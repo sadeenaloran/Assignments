@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    background-color: rgb(21, 21, 35);
+    padding: 10px;
+}
+.logo{
+    flex: 2;
+    padding: 5px;
+    width: 50%;
+    height: 20%;
+}
+.lists{
+    display: flex;
+    flex: 9;
+    gap: 15px;
+    align-items: center ;
+}
+.search{
+    width: 30%;
+    border-radius: 30px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: rgb(21, 21, 35);
+}
+button{
+    color: aliceblue;
+    background-color: rgb(35, 157, 157);
+    border-radius: 25px;
+    padding: 10px;
+    width: 25%;
+}
+video{
+    object-fit:fill;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    justify-content: space-between;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 10px;
+    overflow-x: scroll;
+}
+body{
+    background-color: rgb(28, 28, 47);
+}
+h1{
+    color: #fff;
+}
+.photo{
+    border-radius: 30%;
+    padding: 10px;
+}
+.head{
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    align-items: center;
+    gap: 20px;
+}
+.parent{
+    display: flex;
+    padding: 10px;
+    color: #fff;
+}
+.live{
+    display: flex;
+    align-items: center;
+}
+.live-stream{
+    width: 30px;
+    height: 30px;
+}
+.chanel{
+    display: flex;
+    flex: 1;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: rgb(40, 40, 67);
+    align-items: center;
+    justify-content: center;
+    max-width: 140px;
+}
+.first{
+    max-width: 1700px;
+    flex:1;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(40, 40, 67);
+}
+.time{
+    display: flex;
+    flex: 6;
+    gap: 5px;
+    padding: 5px;
+}
+.image{
+    display: flex;
+    width: 90px;
+    height: 60px;
+}
+.row{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 5px;
+}
+.one{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 6px;
+    border-radius: 6px;
+    gap: 2px;
+    background-color: rgb(40, 40, 67);
+}
