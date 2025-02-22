@@ -8,7 +8,6 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 .container{
     max-width: 1200px;
@@ -22,8 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 40px;
-    gap: 10px;
+    max-width: 40px;
     padding: 6px;
     background-color: #d0c6c6;
 }
@@ -41,7 +39,7 @@
 .secondbar{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    min-width: 300px;
     border-right: 1px solid black;
 }
 .headbar{
@@ -119,12 +117,13 @@
     margin-bottom: 5px;
 }
 .thirdbar{
-    width: 900px;
     padding-left: 3px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     background-color: rgb(201, 196, 196);
     border-bottom: 1px soli #b2afaf;
+    flex-wrap: wrap;
 }
 .chathead{
     display: flex;
