@@ -10,7 +10,8 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  max-width: 1480px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .logo-icon{
   height: 30px;
@@ -40,14 +41,15 @@ a {
 .searchbar{
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 7px;
   border: 1px solid #cec5c5;
   border-radius: 30px;
 }
 .search-box{
   border: none;
-  width: 100px;
+  width: 500px;
 }
 .mic-icon{
   height: 35px;
@@ -75,16 +77,15 @@ button{
 main {
   display: flex;
   height: 92vh;
-
 }
 nav{
   display: flex;
   flex-direction: column;
-  height: 100xh;
+  height: 92vh;
   width: 250px;
   padding: 6px;
   gap: 6px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .child{
   display: flex;
@@ -117,6 +118,7 @@ nav{
   display: flex;
   justify-content: space-between;
   padding: 4px;
+  flex-wrap: wrap;
 }
 .part{
   border-radius: 10px;
@@ -132,34 +134,27 @@ nav{
 }
 .content {
   display: flex;
-  flex-direction: row;
   gap: 10px;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 1200px;
   height: 90%;
 }
-.item {
-  text-align: left;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 25px;
-  flex: 1 1 150px;
-  gap: 20px;
-}
 .video {
-  width: 300px;
-  flex: 1 1 250px;
-  border-radius: 5px;
+  flex: 1 1 300px;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .frame{
-  width: 380px;
+  max-width: 380px;
   flex: 1 1 250px;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 .bottom-video{
   display: flex;
   padding: 5px;
+  max-width: 380px;
+  flex: 1 1 250px;
   gap: 5px;
 }
 .caption{
