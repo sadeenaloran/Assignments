@@ -14,28 +14,7 @@
   <body>
     <nav class="navbar navbar-expand-lg fs-6 fw-bold text-white bg-black">
       <div class="container-fluid d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center gap-4 p-3">
-          <div class="d-flex dropdown">
-            <a class="text-decoration-none fs-5 text-white mt-2 dropdown-toggle"
-              href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore
-            </a>
-            <ul class="dropdown-menu bg-black">
-              <li><a class="dropdown-item text-white" href="#">Home</a></li>
-              <li><a class="dropdown-item text-white" href="#">Missions</a></li>
-              <li><a class="dropdown-item text-white" href="#">Humans in space</a></li>
-              <li><a class="dropdown-item text-white" href="#">Earth</a></li>
-              <li><a class="dropdown-item text-white" href="#">The Solar System</a></li>
-              <li><a class="dropdown-item text-white" href="#">Thea Universe</a></li>
-              <li><a class="dropdown-item text-white" href="#">science</a></li>
-              <li><a class="dropdown-item text-white" href="#">Aeronautics</a></li>
-              <li><a class="dropdown-item text-white" href="#">Technology</a></li>
-              <li><a class="dropdown-item text-white" href="#">Learning Resources</a></li>
-              <li><a class="dropdown-item text-white" href="#">About NASA</a></li>
-            <li><a class="dropdown-item text-white" href="#">Espanol</a></li>
-              <li><hr class="dropdown-divider"/></li>
-            </div>
-          </li>
-          <button
+        <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -44,10 +23,35 @@
             aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+        </button>
+        <div class="d-flex align-items-center gap-4 p-3">
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto text-center">
+              <li class="d-flex dropdown">
+                <a class="text-decoration-none fs-5 text-white mt-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="dropdown-menu bg-black">
+                  <li><a class="dropdown-item text-white" href="#">Home</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Missions</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Humans in Space</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Earth</a></li>
+                  <li><a class="dropdown-item text-white" href="#">The Solar System</a></li>
+                  <li><a class="dropdown-item text-white" href="#">The Universe</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Science</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Aeronautics</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Technology</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Learning Resources</a></li>
+                  <li><a class="dropdown-item text-white" href="#">About NASA</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Español</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <form class="d-lg-flex d-none" role="search">
             <input
-              class="form-control me-2"
+              class="bg-black border border-secondary p-1"
               type="search"
               placeholder="Search..."
               aria-label="Search"
@@ -57,6 +61,9 @@
         <a class="navbar-brand d-flex align-items-center" href="#">
          <img src="nasa-logo.svg" alt="nasa-logo" width="60" height="60" class="ms-5" />
         </a>
+        <button class="btn text-white border-0 d-lg-none">
+          <i class="bi bi-search fs-4"></i>
+        </button>
         <div class="right">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav gap-4 align-items-center">
@@ -114,34 +121,43 @@
     <main>
       <section id="blue-ghost">
         <div class="card text-bg-dark border-0">
-          <img src="blue-ghost-first-image.webp" height="637" class="card-img rounded-0" alt="blue-ghost-first-image">
-          <div class="card-img-overlay ms-2 mb-3 mt-5 col-6 ">
-            <h2 class="card-title fw-bold">Blue Ghost Lands on the Moon</h2>
-            <p class="card-text">Carrying NASA science and technology to the Moon, Firefly Aerospace's lunar lander, Blue Ghost, touched down on the lunar surface at 3:34 a.m. EST on Sunday, March 2.</p>
-            <a href="#" class="btn btn-danger fw-bold fs-4 rounded-1">Mission Updates</a>
-          </div>  
-          <div class="card-img-overlay align-items-end text-white gap-4 d-flex justify-content-start mb-3 col-12 flex-wrap">
-            <div class="d-flex flex-column align-items-start w-25 col-sm-12 gap-2">
+          <img src="blue-ghost-first-image.webp" height="637" class="card-img rounded-0 object-fit-cover" alt="blue-ghost-first-image">
+          <div class="card-img-overlay d-flex flex-column justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 overflow-hidden">
+              <h2 class="card-title display-3 fw-bold">Blue Ghost Lands on the Moon</h2>
+              <p class="card-text">Carrying NASA science and technology to the Moon, Firefly Aerospace's lunar lander, Blue Ghost, touched down on the lunar surface at 3:34 a.m. EST on Sunday, March 2.</p>
+              <a href="#" class="btn btn-danger fw-bold fs-5 rounded-1">Mission Updates</a>
+            </div>
+          </div>
+          <div class="card-img-overlay d-flex align-items-end text-white gap-4 p-4 mb-2">
+            <div class="row w-100">
+              <div class="col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-start gap-2">
                 <hr class="w-100">
                 <span class="small">STUDYING MARE CRISIUM</span>
-                <a  href="#"  class="btn btn-link p-0 text-white text-decoration-none fw-bold">Lunar Science <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill ms-2" viewBox="0 0 16 16">
-                  <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
-                  </svg></a>
-            </div>
-            <div class="d-flex flex-column align-items-start w-25 col-sm-12 gap-2">
+                <a href="#" class="btn btn-link p-0 text-white text-decoration-none fw-bold">Lunar Science 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger ms-2" viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-start gap-2">
                 <hr class="w-100">
-                <span class="small">COMMERIAL PARTNERS</span>
-                <a href="#" class="btn btn-link p-0 text-white text-decoration-none fw-bold">Firefly Aerospace <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill ms-2" viewBox="0 0 16 16">
-                  <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
-              </svg></a>
-            </div>
-            <div class="d-flex flex-column align-items-start w-25 col-sm-12 gap-2">
-              <hr class="w-100">
-              <span class="small">SCIENCE, DELIVERED</span>
-              <a href="#" class="btn btn-link p-0 text-white text-decoration-none fw-bold">A Lunar Economy <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill ms-2" viewBox="0 0 16 16">
-                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
-                </svg>
-              </a>
+                <span class="small">COMMERCIAL PARTNERS</span>
+                <a href="#" class="btn btn-link p-0 text-white text-decoration-none fw-bold">Firefly Aerospace 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger ms-2" viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12 d-flex flex-column align-items-start gap-2">
+                <hr class="w-100">
+                <span class="small">SCIENCE, DELIVERED</span>
+                <a href="#" class="btn btn-link p-0 text-white text-decoration-none fw-bold">A Lunar Economy 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger ms-2" viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>  
@@ -150,20 +166,20 @@
               <div class="container">
                 <div class="row"> 
                   <div class="d-flex flex-wrap justify-content-between mb-5 mt-5 align-items-center">
-                    <h2 class="text-black">Featured News</h2>
-                    <a href="#" class="fs-4 fw-bold text-black text-decoration-none">More NASA News
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                    <h2 class="text-black display-5 fw-bold">Featured News</h2>
+                    <a href="#" class="fs-4 fw-bold text-black text-decoration-none custom-hover">More NASA News
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger" viewBox="0 0 16 16">
                         <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
                       </svg>
                     </a>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="position-relative col col-lg-6 col-md-12 col-sm-12">
+                  <div class="position-relative mb-3 col col-lg-6 col-md-12 col-sm-12">
                     <img src="nasa1.webp" class="img-fluid" alt="nasa1">
                     <div class="position-absolute top-0 start-0 h-100 d-flex flex-column justify-content-between ms-4 gap-3 p-3">
                       <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="saved-icon bi bi-bookmark-fill text-white" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="saved-iconbi bi-bookmark-fill text-white" viewBox="0 0 16 16">
                           <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
                         </svg>
                         <span class="small badge text-white mb-2">ARTICLE</span>
@@ -174,7 +190,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="position-relative col-lg-3 col-md-6 col-sm-12">
+                  <div class="position-relative mb-3 col-lg-3 col-md-6 col-sm-12">
                     <img src="nasa2.webp" class="img-fluid h-100" alt="nasa2">
                     <div class="position-absolute top-0 start-0 h-100 d-flex flex-column justify-content-between ms-4 gap-3 p-3">
                       <div>
@@ -190,9 +206,9 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column justify-content-between">
-                    <div class="position-relative">
+                    <div class="position-relative mb-3">
                       <img src="nasa3.webp" class="img-fluid" alt="nasa3">
-                      <div class="position-absolute top-0 start-0 d-flex flex-column justify-content-between ms-4 gap-3 p-3">
+                      <div class="position-absolute h-100 top-0 start-0 d-flex flex-column justify-content-between ms-4 p-3">
                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="saved-icon bi bi-bookmark-fill" viewBox="0 0 16 16">
                             <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
@@ -205,9 +221,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="position-relative mt-3">
+                    <div class="position-relative mb-3">
                       <img src="nasa4.webp" class="img-fluid" alt="nasa4">
-                      <div class="position-absolute top-0 start-0 d-flex flex-column justify-content-between ms-4 gap-3 p-3">
+                      <div class="position-absolute top-0 start-0 h-100 d-flex flex-column justify-content-between ms-4 gap-3 p-3">
                         <div class="upper-content d-flex align-items-start">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="saved-icon bi bi-bookmark-fill" viewBox="0 0 16 16">
                             <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
@@ -223,8 +239,8 @@
                   </div>
                 </div>
                 <div class="row mt-4 mb-4">
-                  <div class="col-lg-3 col-md-6 mb-4 d-flex flex-wrap">
-                    <div class="d-flex align-items-center flex-wrap">
+                  <div class="col-lg-3 col-md-6 mb-4 d-flex">
+                    <div class="d-flex align-items-center">
                         <img src="nasa1.webp" class="rounded-circle article-image" alt="nasa1">
                         <div class="ms-3">
                             <span class="small font-monospace">3 MIN READ</span>
@@ -239,7 +255,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-6 mb-4 d-flex">
-                    <div class="d-flex align-items-center flex-wrap">
+                    <div class="d-flex align-items-center">
                         <img src="helix.webp" class="rounded-circle article-image" alt="helix">
                         <div class="ms-3">
                             <span class="small font-monospace">6 MIN READ</span>
@@ -254,7 +270,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-6 mb-4 d-flex">
-                    <div class="d-flex align-items-center flex-wrap">
+                    <div class="d-flex align-items-center">
                         <img src="Hubble.jpg" class="rounded-circle article-image" alt="Hubble">
                         <div class="ms-3">
                             <span class="small font-monospace">6 MIN READ</span>
@@ -269,7 +285,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 d-flex">
-                  <div class="d-flex align-items-center flex-wrap">
+                  <div class="d-flex align-items-center">
                       <img src="Lunar.jpg" class="rounded-circle article-image" alt="Lunar">
                       <div class="ms-3">
                           <span class="small font-monospace">5 MIN READ</span>
@@ -292,7 +308,7 @@
                     <h3 class="fw-bold fs-1 mb-3 text-white">March 2025 Total Lunar Eclipse</h3>
                     <p class="text-white-50 mb-3">The Moon will pass into Earth’s shadow and appear to turn red on the night of March 13 or early in the morning on March 14, depending on time zone.</p>
                     <a href="#" class="fw-bold text-white text-decoration-none">What You Need To Know
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger" viewBox="0 0 16 16">
                         <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
                       </svg>
                     </a>
@@ -307,12 +323,12 @@
             </section>
             <section class="spacex mt-5">
               <div class="card text-bg-dark border-0">
-                <img src="SpaceX.webp" height="650" class="card-img rounded-0" alt="spacex">
-                <div class="card-img-overlay bg-opacity-50 bg-black rounded-0">
-                  <div class="card-img-overlay mb-3 mt-5 col-6">
-                    <h2 class="card-title fw-bold mb-5 mt-5 ms-5">NASA's SpaceX Crew-10</h2>
+                <img src="SpaceX.webp" height="650" class="card-img rounded-0  object-fit-cover" alt="spacex">
+                <div class="card-img-overlay bg-opacity-50 bg-black rounded-0 d-flex flex-column justify-content-center p-4">
+                  <div class="col-lg-6 col-md-8 col-sm-10 overflow-hidden">
+                    <h2 class="card-title display-4 fw-bold mb-5 mt-5 ms-5">NASA's SpaceX Crew-10</h2>
                     <p class="card-text col-10 mb-5 ms-5">Four crew members are preparing to launch to the International Space Station on Wednesday, March 12, as part of NASA’s SpaceX Crew-10 mission to perform research, technology demonstrations, and maintenance activities aboard the microgravity laboratory.</p>
-                    <a href="#" class="text-decoration-none fw-bold text-white fs-4 ms-5">What to Know <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                    <a href="#" class="text-decoration-none fw-bold text-white fs-4 ms-5">What to Know <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger" viewBox="0 0 16 16">
                       <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
                       </svg>
                     </a>
@@ -325,7 +341,7 @@
                 <div class="d-flex justify-content-between flex-wrap align-items-center mb-5 mt-5"> 
                   <h2 class="text-black fw-bold fs-1">Humans in Space</h2>
                   <a href="#" class="fs-4 fw-bold text-black text-decoration-none">Discover More
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger" viewBox="0 0 16 16">
                       <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
                     </svg>
                   </a>
@@ -336,7 +352,7 @@
                       <img src="space1.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="space1">
                       <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                         <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Living in Space
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                           </svg>
                         </a>
@@ -348,7 +364,7 @@
                       <img src="space2.jpg" height="450" width="80%" class="d-block card-img rounded-0" alt="space1">
                       <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                         <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Commercial Space
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                           </svg>
                         </a>
@@ -360,7 +376,7 @@
                       <img src="space3.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="space1">
                       <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                         <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Low Earth Orbit Economy
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                           </svg>
                         </a>
@@ -372,7 +388,7 @@
                       <img src="space4.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="space1">
                       <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                         <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Spaceships and Rockets
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                           </svg>
                         </a>
@@ -382,15 +398,15 @@
                 </div>
               </div>
             </section>
-            <section class="earth mt-5">
+            <section class="earth mt-5 overflow-hidden">
               <div class="card text-bg-dark border-0">
-                <img src="Earth.webp" height="100%" class="card-img rounded-0" alt="earth">
-                <div class="card-img-overlay bg-opacity-50 bg-black rounded-0">
-                  <div class="d-flex flex-column align-items-start mb-3 mt-5 col-6 ms-5">
-                    <h2 class="card-title display-1 fw-bold mb-5 mt-5 ms-5 col-10">Earth Information Center</h2>
+                <img src="Earth.webp" height="800" class="card-img rounded-0 object-fit-cover" alt="earth">
+                <div class="card-img-overlay d-flex flex-column justify-content-center p-4 bg-opacity-50 bg-black rounded-0">
+                  <div class="col-lg-6 col-md-8 col-sm-10 overflow-hidden">
+                    <h2 class="card-title display-1 fw-bold mb-5 ms-5">Earth Information Center</h2>
                     <p class="card-text col-10 fs-6 mb-4 ms-5">For more than 50 years, NASA satellites have provided data on Earth's land, water, air, temperature, and climate. NASA's Earth Information Center allows visitors to see how our planet is changing in six key areas: sea level rise and coastal impacts, health and air quality, wildfires, greenhouse gases, sustainable energy, and agriculture.</p>
                     <a href="#" class="fw-bold text-white text-decoration-none fs-4 ms-5">Start Exploring
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up-right-circle-fill text-danger" viewBox="0 0 16 16">
                        <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
                       </svg>
                     </a>
@@ -407,7 +423,7 @@
                     <h4 class="fw-bold fs-4 pt-5 text-black">NASA Astronaut Tracy Dyson Speaks to Students</h4>
                     <p class="text-black mt-3">NASA astronaut Tracy Dyson points to the Expedition 71 patch on her flight suit as she answers a question from students, Wednesday, March 5, 2025, at Elsie Whitlow Stokes Community Freedom Public Charter School in Washington. Dyson and fellow crewmates Matthew Dominick, Michael Barratt, and Jeanette Epps served as part of Expedition 71 aboard the International Space Station.</p>
                     <a href="#" class="fw-bold mb-2 text-black text-decoration-none">Browse Image Archive
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                       </svg>
                     </a>
@@ -417,7 +433,7 @@
                       <img src="Astronaut.webp" alt="Astronaut" class="d-block img-fluid mx-lg-auto h-100 w-100">
                       <div class="position-absolute top-0 end-0 mt-1 me-1">
                         <button type="button" class="btn btn-primary rounded-circle">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-download text-white" viewBox="0 0 16 16">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-download text-white text-danger" viewBox="0 0 16 16">
                           <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                           <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
                         </svg>
@@ -426,7 +442,7 @@
                     </div>
                     <div class="d-flex justify-content-end gap-1 ms-5 ">
                       <a href="#" class="fw-bold text-black text-decoration-none mt-1">View image
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                          <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                       </a>
@@ -491,18 +507,18 @@
                 </div>
               </div>
             </section>
-            <section class="universe mt-5">
+            <section id="universe" class="mt-5">
               <div class="card text-bg-dark border-0">
-                <img src="universe.webp" height="570" class="card-img rounded-0" alt="universe">
-                <div class="card-img-overlay rounded-0">
-                  <div class="card-img-overlay mt-5 ms-5 col-4">
-                    <h2 class="card-title fw-bold mb-4 mt-5 ms-5">Explore the Universe from your Inbox</h2>
-                    <p class="card-text fw-bold col-12 ms-5">Stay up-to-date on the latest news from NASA-from Earth to the Moon, the Solar System and beyond.</p>
+                <img src="universe.webp" height="570" class="card-img rounded-0 object-fit-cover" alt="universe">
+                <div class="card-img-overlay d-flex flex-column justify-content-center p-4">
+                  <div class="col-lg-6 col-md-8 col-sm-10 ms-5 overflow-hidden">
+                    <h2 class="card-title display-4 col-8 fw-bold mb-4 mt-5 ms-5">Explore the Universe from your Inbox</h2>
+                    <p class="card-text fw-bold col-8 ms-5">Stay up-to-date on the latest news from NASA-from Earth to the Moon, the Solar System and beyond.</p>
                     <p class="card-text fw-normal ms-5">We will never share your email address.
                       <a href="https://www.nasa.gov/privacy/" class="text-decoration-none text-white">Privacy Policy</a> 
                     </p>
                     <a href="#" class="text-decoration-none fw-bold text-white mt-4 fs-4 ms-5">Sign Up
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                        </svg>
                     </a>
@@ -518,7 +534,7 @@
                     <img src="topic1.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic1">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Missions
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                       </a>
@@ -531,7 +547,7 @@
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end justify-content-between d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3 col-8">Humans In Space
                       </a> 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill mb-5" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill mb-5 text-danger" viewBox="0 0 16 16">
                           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                     </div>
@@ -542,7 +558,7 @@
                     <img src="topic3.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic3">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end justify-content-between d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3 col-8">Climate Change</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill mb-5" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill mb-5 text-danger" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                       </svg>
                     </div>
@@ -553,7 +569,7 @@
                     <img src="topic4.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic4">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end justify-content-between d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3 col-8">Our Solar System</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill mb-5" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill mb-5 text-danger" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                       </svg>
                     </div>
@@ -564,7 +580,7 @@
                     <img src="topic5.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic5">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Universe
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                       </a>
@@ -576,7 +592,7 @@
                     <img src="topic6.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic6">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Science News
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                       </a>
@@ -588,7 +604,7 @@
                     <img src="topic7.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic7">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Aeronautics
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                       </a>
@@ -600,7 +616,7 @@
                     <img src="topic8.webp" height="450" width="80%" class="d-block card-img rounded-0" alt="topic8">
                     <div class="card-img-overlay bg-opacity-50 bg-black align-items-end d-flex">
                       <a href="#" class="text-decoration-none text-white fw-bold fs-3 p-3">Technology
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-circle-fill text-danger" viewBox="0 0 16 16">
                           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                         </svg>
                       </a>
@@ -634,7 +650,11 @@
                 <li><a href="#" class="text-white text-decoration-none">Home</a></li>
                 <li><a href="#" class="text-white text-decoration-none">News & Events</a></li>
                 <li><a href="#" class="text-white text-decoration-none">Multimedia</a></li>
-                <li><a href="#" class="text-white text-decoration-none">NASA+<button type="button" class="btn btn-outline-danger font-monospace text-light rounded-1">LIVE</button></a></li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none">NASA+
+                      <button type="button" class="btn btn-outline-danger font-monospace text-light rounded-1">LIVE</button>
+                  </a>
+                </li>
                 <li><a href="#" class="text-white text-decoration-none">Missions</a></li>
               </ul>
             </div>
