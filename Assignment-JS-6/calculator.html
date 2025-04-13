@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+      <input type="text" id="result" disabled />
+      <br />
+      <div class="calculator">
+        <button onclick="calculator.calcNumber(0)">0</button>
+        <button onclick="calculator.calcNumber(1)">1</button>
+        <button onclick="calculator.calcNumber(2)">2</button>
+        <button onclick="calculator.calcNumber(3)">3</button>
+        <button onclick="calculator.calcNumber(4)">4</button>
+        <button onclick="calculator.calcNumber(5)">5</button>
+        <button onclick="calculator.calcNumber(6)">6</button>
+        <button onclick="calculator.calcNumber(7)">7</button>
+        <button onclick="calculator.calcNumber(8)">8</button>
+        <button onclick="calculator.calcNumber(9)">9</button>
+        <button onclick="calculator.calcDecimal()">.</button>
+
+        <button onclick="calculator.Operator('+')">+</button>
+        <button onclick="calculator.Operator('-')">-</button>
+        <button onclick="calculator.Operator('*')">*</button>
+        <button onclick="calculator.Operator('/')">/</button>
+
+        <br />
+        <button onclick="calculator.calculate()">=</button>
+        <button onclick="calculator.clear()">C</button>
+      </div>
+    </div>
+    <script src="calculatror.js"></script>
+  </body>
+</html>
