@@ -1,0 +1,16 @@
+.mybg{
+    background-color: rgb(8, 52, 75) !important;
+}
+.myimg{
+    max-height: 500px;
+}
+.table-responsive {
+    width: 100%;
+}
+#table-view {
+    display: table;
+}
+#card-view {
+    display: none;
+}
+  
