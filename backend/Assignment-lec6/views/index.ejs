@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%- title %></h1>
+    <!-- <h1>Hello, It's <%# type %>, <%# advice %> </h1> -->
+    <p>The Current Second <%= seconds %></p>
+    <% if (seconds % 2 === 0){ %>
+        <p> No items here! </p>
+     <% }else { %>
+        <ul>
+          <% for(let i =0; i<items.length; i++){ %>
+            <li><%= items[i] %></li>
+                <% } %> 
+        </ul>
+    <% } %>
+
+    <h2><%= htmlContent %></h2>
+    <%- include("footer.ejs") %>
+  </body>
+</html>

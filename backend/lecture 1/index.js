@@ -19,9 +19,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 // custome middle ware (custome paresr:i make the operation inside it).
 // in any middleware it has to have next.
 function saveToDb (req, res, next){ 
+    console.log(req.body);
+    console.log(userInfo.email);
     if (req.body){
-         userInfo.email = req.body.email,
-         userInfo.password = req.body.password;}
+         userInfo.email = req.body["email"];
+         userInfo.password = req.body["password"];
+    }
     next();
 }
 app.use(saveToDb);
