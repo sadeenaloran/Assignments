@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%#
+    <!-- to preview the number of alphabit of firstname and lastname -->
+    %>
+    <% if (locals.numberOfLetters){ %>
+    <h1>There are <%= numberOfLetters %> letters in your name</h1>
+    <% } %> <% if (locals.fullName){ %>
+    <h1>Your Name is <%= fullName %> letters in your name</h1>
+    <% } %>
+    <form action="/submit" method="post">
+      <input type="text" name="firstname" />
+      <input type="text" name="lastname" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
