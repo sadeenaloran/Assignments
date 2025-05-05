@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header,
+footer {
+  background-color: rgb(254, 178, 215);
+}
+
+.fashion-card {
+  background-color: rgb(255, 188, 234);
+}
+
+.createButton {
+  color: rgb(247, 233, 243);
+  background-color:  rgb(240, 151, 194);
+}
+.card, hr{
+  border: 1px solid rgb(255, 188, 234);
+}
