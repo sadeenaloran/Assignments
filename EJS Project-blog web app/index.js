@@ -42,7 +42,7 @@ app.post("/createpost", (req, res) => {
     new Date(),
   );
 
-  posts.push(newPost);
+  posts.unshift(newPost);
   res.render("index.ejs", { posts: posts });
 });
 
@@ -65,7 +65,7 @@ app.get("/editpost/:id", (req, res) => {
 
 app.post("/editpost/:id", (req, res) => {
   const postId = parseInt(req.params.id);
-  const index = posts.findIndex(p => p.id === postId);
+  const index = posts.findIndex(post => post.id === postId);
 
   if (index !== -1) {
     posts[index].title = req.body.title;
@@ -77,9 +77,18 @@ app.post("/editpost/:id", (req, res) => {
   }
 });
 
+app.get("/posts/:id", (req, res) => {
+  const postId = parseInt(req.params.id);
+  const post = posts.find(post => post.id === postId);
+
+  if (post) {
+    res.render("viewPost.ejs", { post });
+  } else {
+    res.status(404).send("Post not found");
+  }
+});
+
 app.listen(port, () => {});
-
-
 
 
 
