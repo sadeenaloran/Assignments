@@ -1,0 +1,122 @@
+<%- include("partials/header.ejs") %>
+<div class="card border-0 rounded-0 fashion-card">
+  <div class="row g-0 d-flex flex-wrap-reverse">
+    <div class="col-md-6">
+      <div class="card-body m-5">
+        <h1 class="card-title">Welcome to Fashion Blog</h1>
+        <p class="card-text">
+          A simple and elegant platform for discovering the latest trends,
+          sharing your styles, and global fashion voices all in one place. Join
+          a community where every outfit tells a story. sharing your thoughts,
+          ideas, and stories with the world.
+        </p>
+        <a
+          href="/addBlog"
+          id="createPost"
+          class="btn btn-outline-light fw-semibold"
+          ><i class="bi bi-plus"></i> Create New Post</a
+        >
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 d-flex justify-content-center">
+      <img
+        src="images/fashionblog.jpg"
+        class="img-fluid rounded-1 p-2 mt-2"
+        alt="fashion"
+        width="320"
+      />
+    </div>
+  </div>
+</div>
+<div class="mx-3 my-3">
+  <h3 class="mx-2">Recent Posts</h3>
+  <div>
+    <div class="row g-3 mb-3">
+      <% posts.forEach(post => { %>
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title"><%= post.title %></h4>
+            <hr />
+            <h6><small><%= post.date %></small></h6>
+            <p class="card-text"><%= post.content %></p>
+            <h6><%= post.author %></h6>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-light"><small>See More...</small></a>
+              <div>
+                <a href="/editpost/<%= post.id %>" class="btn btn-outline-secondary btn-sm me-1">Edit</a>
+                <form
+                  action="/deletepost/<%= post.id %>"
+                  method="POST"
+                  class="d-inline"
+                >
+                  <button type="submit" class="btn btn-outline-danger btn-sm">
+                    Delete
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-lg-6 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Effortless Street Style — Turning Basics Into Bold Looks
+          </h5>
+          <hr />
+          <h6>Mon April 15 2025</h6>
+          <p class="card-text">
+            There's something powerful about simplicity. This season, I've been
+            obsessed with transforming everyday basics white tees, denim
+            jackets, and plain sneakers into bold, head-turning outfits with
+            just a few statement pieces. A chunky necklace, a bright bucket hat,
+            or even a patterned belt can change the whole vibe. Yesterday, I
+            styled a basic white crop top with high-waisted mom jeans, layered
+            it with an oversized blazer, and threw on my go to platform
+            sneakers. Add a red lip and gold hoops? Instant upgrade.<br />
+            ✨ Street style isn't about following the rules it's about rewriting
+            them with your personal twist. What's your favorite go-to piece that
+            always makes you feel confident? #StreetStyle #MinimalToBold
+            #EverydayChic #OOTD
+          </p>
+          <h6>Author: LaylaTrendz</h6>
+          <a href="#" class="btn btn-light">See More...</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            From Simple to Standout — Mastering the Art of Street Style
+          </h5>
+          <hr />
+          <h6>Sun March 30 2025</h6>
+          <p class="card-text">
+            Who says comfort can't be chic? Lately, I've been diving into my
+            closet and realizing that the most low-key pieces are the ones with
+            the most potential. Think: oversized hoodies, black leggings, and
+            classic white sneakers. With the right styling, they go from lazy
+            day to runway-ready. Today, I paired my charcoal hoodie with faux
+            leather joggers, added a neon green mini bag, and topped it off with
+            angular sunglasses. The vibe? Relaxed, but intentional. <br />
+            ✨ Street style is all about self-expression — it's mixing high with
+            low, soft with structured, and never apologizing for being bold.
+            What's your secret trick to turning a chill outfit into a fashion
+            statement? #StyleYourWay #StreetChic #EffortlessEdge #ComfyCool
+          </p>
+          <h6>Author: ZaraMode</h6>
+          <a href="#" class="btn btn-light">See More...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include("partials/footer.ejs") %>
+  <script src="/javascript/body.js"></script>
+</div>
