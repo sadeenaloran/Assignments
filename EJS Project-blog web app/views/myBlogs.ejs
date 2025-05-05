@@ -18,20 +18,20 @@
   <div class="row flex-wrap g-3 mb-3">
     <% posts.forEach(post => { %>
     <div class="col-12 col-lg-6 col-md-6">
-      <div class="card h-100">
+      <div class="card shadow h-100">
         <div class="card-body">
           <h4 class="card-title"><%= post.title %></h4>
           <hr />
-          <h6><small><%= post.date %></small></h6>
-          <p class="card-text"><%= post.content %></p>
+          <h6><small><%= post.date.toString().split(' GMT')[0] %></small></h6>
+          <p class="card-text text-truncate"><%= post.content %></p>
           <h6>Auther: <%= post.author %></h6>
           <div class="d-flex justify-content-between">
-            <a href="#" class="btn btn-light"><small>See More...</small></a>
+            <a href="/posts/<%= post.id %>" class="btn btn-light"><small>See More...</small></a>
             <div>
               <a href="/editpost/<%= post.id %>" class="btn btn-outline-secondary btn-sm me-1">Edit</a>
               <form
                 action="/deletepost/<%= post.id %>"
-                method="POST"
+                method="post"
                 class="d-inline"
               >
                 <button type="submit" class="btn btn-outline-danger btn-sm">
