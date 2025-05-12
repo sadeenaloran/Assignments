@@ -4,40 +4,40 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 4000;
 let posts = [
-    {
-        id:1,
-        title:"xccc",
-        content:"ccccc",
-        author:"cc",
-        date:"ccc",
-    },
+  {
+    id: 1,
+    title: "Effortless Street Style — Turning Basics Into Bold Looks",
+    content:
+      "There's something powerful about simplicity. This season, I've been obsessed with transforming everyday basics white tees, denim jackets, and plain sneakers into bold, head-turning outfits with just a few statement pieces. A chunky necklace, a bright bucket hat, or even a patterned belt can change the whole vibe. Yesterday, I styled a basic white crop top with high-waisted mom jeans, layered it with an oversized blazer, and threw on my go to platform sneakers. Add a red lip and gold hoops? Instant upgrade.<br /> ✨ Street style isn't about following the rules it's about rewriting them with your personal twist. What's your favorite go-to piece that always makes you feel confident? #StreetStyle #MinimalToBold #EverydayChic #OOTD",
+    author: "Author: LaylaTrendz",
+    date: "Mon April 15 2025 15:30:20",
+  },
+  {
+    id: 2,
+    title: "From Simple to Standout — Mastering the Art of Street Style",
+    content:"Who says comfort can't be chic? Lately, I've been diving into my closet and realizing that the most low-key pieces are the ones with the most potential. Think: oversized hoodies, black leggings, and classic white sneakers. With the right styling, they go from lazy day to runway-ready. Today, I paired my charcoal hoodie with faux leather joggers, added a neon green mini bag, and topped it off with angular sunglasses. The vibe? Relaxed, but intentional. <br /> ✨ Street style is all about self-expression — it's mixing high with low, soft with structured, and never apologizing for being bold. What's your secret trick to turning a chill outfit into a fashion statement? #StyleYourWay #StreetChic #EffortlessEdge #ComfyCool",
+    author: "Author: ZaraMode",
+    date: "Sun March 30 2025 12:15:36",
+  },
 ];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-let lastId = 3;
+let lastId = 2;
 
-// READ IN CRUD OPERATIONS
-// API to get all posts. (test it on postman)
 app.get("/posts", (req, res)=>{
     res.json(posts);
 });
 
-// API to get one post by id.(when i do edit-> the data fill in post it comes from get post by id).
 app.get("/posts/:id", (req, res)=>{
     const id =  parseInt(req.params.id);
     const post = posts.find((post)=> post.id === id);
-    //  to check if thr object will be in the database or not.(it's normal that one of users do delete an another one do get in the same time)
-    if (post)
-        res.json(post);
-    // always send an error message as an json 
+    if (post) return res.json(post);
     res.status(404).json({error:"Post Not Found"});
 });
-// CREATE IN CRUD OPERATIONS
-// API to post posts. (test it on postman)
+
 app.post('/posts', (req, res)=>{
-    // to update the lastId.
     lastId++;
     const newPost = {
         id: lastId,
@@ -48,14 +48,9 @@ app.post('/posts', (req, res)=>{
     };
 
     posts.push(newPost);
-
-    // just for testing we send the status.
     res.status(201).json(newPost)
 });
 
-// UPDATE IN CRUD OPERATIONS
-// API to patch posts. (test it on postman)
-// to be in the safe side use patch because user not always give me or return the variables for title, content, author,...
 app.patch('/posts/:id', (req, res)=>{
     const id = parseInt(req.params.id);
     const postIndex = posts.findIndex((post)=> post.id === id);
@@ -70,8 +65,7 @@ app.patch('/posts/:id', (req, res)=>{
     posts[postIndex] = updatedPost;
     res.status(200).json(updatedPost);
 });
-// UPDATE IN CRUD OPERATIONS
-// API to put posts. (test it on postman)
+
 app.put('/posts/:id', (req, res)=>{
     const id = parseInt(req.params.id);
     const postIndex = posts.findIndex((post)=> post.id === id);
@@ -87,10 +81,8 @@ app.put('/posts/:id', (req, res)=>{
     res.status(200).json(updatedPost);
 });
 
-// DELETE IN CRUD OPERATIONS
-// API to delete posts. (test it on postman)
-// in any crud operation we have to check the index.
 app.delete('/posts/:id', (req, res)=>{
+    const id = parseInt(req.params.id); 
     const postIndex = posts.findIndex((post)=> post.id === id);
     if (postIndex > -1) {
     posts.splice(postIndex, 1);
@@ -99,7 +91,7 @@ app.delete('/posts/:id', (req, res)=>{
     res.sendStatus(404).json({ error: `post id ${id} not found` });
   }
 });
-// Delete all
+
 app.delete('/posts', (req, res)=>{
     posts = [];
     res.json(posts);

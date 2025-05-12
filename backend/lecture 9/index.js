@@ -19,7 +19,8 @@ let colors = [
   { id: 12, color: "Cyan", value: "#00FFFF" },
   { id: 13, color: "Magenta", value: "#FF00FF" },
 ];
-
+// always the lastId will be increment.
+let lastId=8;
 app.use(bodyParser.urlencoded({ extended: true }));
 // GET API 
 app.get("/colors", (req, res) => {
@@ -36,7 +37,7 @@ app.get("/random", (req, res) => {
 app.get("/colors/:id", (req, res) => {
   // everything in the req (parameters, query parameters,..) return as an string so, needs to convert them into int by parseInt (id type in list number)
   const id = parseInt(req.params.id);
-  // to search the id in the list.
+  // to search the id in the list.OR to return the variable (color).
   // == the check is based on the value, not the type.
   const colorObj = colors.find((color) => color.id === id);
   res.json(colorObj);
@@ -51,8 +52,10 @@ app.get("/filter", (req, res) => {
 
 // POST API --> to create new object in database 
 app.post("/colors", (req, res) => {
+  lastId ++;
   const newColor = {
-    id: colors.length + 1,
+    // id: colors.length + 1,
+    id: lastId,
     color: req.body.color,
     value: req.body.value,
   };
@@ -76,31 +79,34 @@ app.put("/colors/:id", (req, res) => {
 app.patch("/colors/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const colorObj = colors.find((color) => color.id === id);
+  // const colorIndex = colors.findIndex((color) => color.id === id);
+  // const colorObj = colors[colorIndex]
   const updatedColor = {
     id: id,
+    // to check if there color in the req, if yes stored it in color, if no use the same color already existing.
     color: req.body.color || colorObj.color,
     value: req.body.value || colorObj.value,
   };
 
-  const colorIndex = colors.findIndex((color) => color.id === id);
   colors[colorIndex] = updatedColor;
   res.json(updatedColor);
 });
+// DELETE 
+app.delete("/colors/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  //  in findIndex (-1) means the object or id not found.
+  const colorIndex = colors.findIndex((color) => color.id === id);
+  if (colorIndex > -1) {
+    colors.splice(colorIndex, 1);
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(404).json({ error: `Color id ${id} not found` });
+  }
+});
 
-// app.delete("/colors/:id", (req, res) => {
-//   const id = parseInt(req.params.id);
-//   const colorIndex = colors.findIndex((color) => color.id === id);
-//   if (colorIndex > -1) {
-//     color.splice(colorIndex, 1);
-//     res.sendStatus(200);
-//   } else {
-//     res.sendStatus(404).json({ error: `Color id ${id} not found` });
-//   }
-// });
-
-// app.delete("/all/:id", (req, res) => {
-//   colors = [];
-//   res.sendStatus(200);
-// });
+app.delete("/all", (req, res) => {
+  colors = [];
+  res.sendStatus(200);
+});
 
 app.listen(port, () => {});
