@@ -1,0 +1,78 @@
+<div
+  class="tab-pane fade p-3"
+  id="preview-users-pane"
+  role="tabpanel"
+  aria-labelledby="preview-users-tab"
+  tabindex="0"
+>
+  <button
+    id="switch-toggle"
+    onclick="Switch()"
+    class="btn btn-outline-warning d-flex align-items-center justify-content-start gap-2 ms-1 my-3"
+  >
+    <h6
+      class="fst-italic text-primary-emphasis fw-semibold text-align-center mt-2"
+    >
+      Table
+    </h6>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi text-warning bi-toggles"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M4.5 9a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 0 0-7zm7 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m-7-14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m2.45 0A3.5 3.5 0 0 1 8 3.5 3.5 3.5 0 0 1 6.95 6h4.55a2.5 2.5 0 0 0 0-5zM4.5 0h7a3.5 3.5 0 1 1 0 7h-7a3.5 3.5 0 1 1 0-7"
+      />
+    </svg>
+    <h6
+      class="fst-italic text-primary-emphasis fw-semibold text-align-center mt-2"
+    >
+      Cards
+    </h6>
+  </button>
+  <div class="table-responsive">
+    <table
+      class="table table-hover table-striped align-middle text-center"
+      id="table-view"
+    >
+      <thead>
+        <tr>
+          <th class="mybg text-white">
+            <i class="bi bi-person-fill me-2"></i>Name
+          </th>
+          <th class="mybg text-white">
+            <i class="bi bi-envelope-fill me-2"></i>Email
+          </th>
+          <th class="mybg text-white">
+            <i class="bi bi-telephone-fill me-2"></i>Phone Number
+          </th>
+          <th class="mybg text-white">
+            <i class="bi bi-gender-ambiguous me-2"></i>Gender
+          </th>
+          <th class="mybg text-white">
+            <i class="bi bi-geo-alt-fill me-2"></i>Address
+          </th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div id="card-view" class="row flex-wrap g-3 mb-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card mybg text-white h-100 w-100">
+        <div id="card-body" class="card-body">
+          <h4 class="border-bottom border-warning bg-warning-subtle">
+            <i class="bi bi-person-fill me-2"></i>
+          </h4>
+          <p><i class="bi bi-envelope-fill me-2"></i></p>
+          <p><i class="bi bi-telephone-fill me-2"></i></p>
+          <p><i class="bi bi-gender-ambiguous me-2"></i></p>
+          <p><i class="bi bi-geo-alt-fill me-2"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
