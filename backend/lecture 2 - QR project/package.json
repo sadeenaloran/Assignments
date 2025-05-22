@@ -7,5 +7,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^12.6.1",
+    "qr-image": "^3.2.0"
+  }
 }

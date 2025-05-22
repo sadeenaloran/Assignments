@@ -1,11 +1,17 @@
-import express from 'express';
+import express from "express";
+import {
+  createUser,
+  deleteUser,
+  getUser,
+  updateUser,
+} from "../controllers/usersContoller";
 
 const router = express.Router();
-router.get('/', getUser);
-router.post('/createUser/:id', createUser);
-router.put('/update/:id', upadateUser);
-router.delete('/delete/:id', deleteUser);
 
+router.get("/", getUser);
+router.get("/createUser/:id", createUser);
+router.get("/update/:id", updateUser);
+router.get("/delete/:id", deleteUser);
 
-
+// how to call userRoutes and import it in anywhere. 
 export default router;

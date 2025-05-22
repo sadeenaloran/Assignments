@@ -1,10 +1,11 @@
 import pool from "../configration/db.js";
 
 // CREATE
+// define a normal function,to allow use createUser by export.
 export const createUser = async (req, res) => {
   const { name, email } = req.body;
   try {
-    await pool.query("INSERT INTO users (name, email) VALUES ($1, $2", [
+    await pool.query("INSERT INTO users (name, email) VALUES ($1, $2)", [
       name,
       email,
     ]);
@@ -44,6 +45,7 @@ export const updateUser = async (req, res) => {
 
 // DELETE
 export const deleteUser = async (req, res) => {
+  const id = req.params.id;
   const { name, email } = req.body;
   try {
     const result = await pool.query("DELETE  FROM users WHERE id=$1", [id]);
@@ -53,8 +55,3 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
- 
-// export const deleteUser = async (req, res) => {
-//   const id = req.param.id;
-//   await pool.query("DELETE FROM users WHERE id = $1"[id]);
-// };
